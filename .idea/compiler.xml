@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gm-gradle-plugin_main" target="1.8" />
+      <module name="gm-gradle-plugin_test" target="1.8" />
+      <module name="gm-gradle_main" target="1.8" />
+      <module name="gm-gradle_test" target="1.8" />
+      <module name="Gm_main" target="1.8" />
+      <module name="gm_main" target="1.8" />
+      <module name="Gm_test" target="1.8" />
+      <module name="gm_test" target="1.8" />
+      <module name="GmPlugin_main" target="1.8" />
+      <module name="GmPlugin_test" target="1.8" />
+      <module name="gmutils_main" target="1.8" />
+      <module name="gmutils_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,56 @@
+apply plugin: 'groovy'
+
+apply plugin: 'maven'
+group = 'com.gm.tools'
+version = '1.0.0'
+
+archivesBaseName = 'gm-gradle-plugin'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.gradle.publish:plugin-publish-plugin:0.10.0"
+    }
+}
+
+apply plugin: "com.gradle.plugin-publish"
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.12'
+    compile 'com.android.tools.build:gradle:3.2.1'
+    compile gradleApi()
+    compile localGroovy()
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    google()
+    jcenter()
+}
+
+pluginBundle {
+    website = 'https://github.com/goutham106/gm-gradle-plugin'
+    vcsUrl = 'git@github.com:goutham106/gm-gradle-plugin.git'
+    description = 'Android components automatic build script'
+    tags = ['Android', 'Gradle', 'Components', 'Utils']
+
+    plugins {
+        screenPlugin{
+            id = 'plugin.screen'
+            displayName = "ScreenPlugin"
+        }
+    }
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('/Users/Gowtham/.m2/repository'))
+    }
+
+}
